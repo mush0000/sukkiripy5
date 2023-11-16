@@ -24,4 +24,7 @@ def show_payment(amount,pay,people=2):
     print("*** 支払額 ***")
     print("1人あたり{}円({}人)、幹事は{}円です".format(pay,people -1, payorg))
 
-int_input("支払総額を入力してください>>","参加人数を入力してください")
+amount,people = int_input("支払総額を入力してください>>","参加人数を入力してください>>")
+dnum,pay = calc_payment(amount,people)
+show_payment(amount,pay,people)
+
